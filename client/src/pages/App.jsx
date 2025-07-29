@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AuthProvider } from './context/AuthContext';
-import { CartProvider } from './context/CartContext';
-import Navbar from './components/Navbar';
-import HomePage from './pages/HomePage';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import CartPage from './pages/CartPage';
-import CategoryPage from './pages/CategoryPage';
-import Footer from './components/Footer';
-import PrivateRoute from './components/PrivateRoute';
+import { AuthProvider } from '../context/AuthContext.jsx';
+import { CartProvider } from '../context/CartContext.jsx';
+import Navbar from '../components/Common/Navbar.jsx';
+import HomePage from '../components/Home/HomePage.jsx';
+import Login from '../components/Auth/Login.jsx';
+import Signup from '../components/Auth/Signup.jsx';
+import CartPage from '../components/Cart/CartPage.jsx';
+import CategoryPage from '../components/Category/CategoryPage.jsx';
+import Footer from '../components/Common/Footer.jsx';
+import PrivateRoute from '../components/Common/PrivateRoute.jsx';
 
 function App() {
   return (
@@ -35,7 +35,7 @@ function App() {
         </CartProvider>
       </AuthProvider>
     </Router>
-  );
+    );
 }
 
 export default App;
